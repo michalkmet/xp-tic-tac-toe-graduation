@@ -1,25 +1,38 @@
 function ticTacToe() {
   let gameStr = '';
   let cells = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+  let alreadyPicked = [];
   gameStr += 'Game Board Creation...';
   gameStr += gameBoard(cells);
   gameStr += '\n\nBoard Created.';
   gameStr += '\nThe game will start with player X';
   console.log(gameStr);
-
-  for (let i = 0; i < 9; i++){
-    if (i % 2 === 0){
+  let board = '';
+  for (let i = 0; i < 9; i++) {
+    let randomNumber = getRandomNumber(alreadyPicked);
+    if (i % 2 === 0) {
       cells[randomNumber] = 'X';
+    } else {
+      cells[randomNumber] = 'O';
     }
+    console.log('cells: ', cells);
+    board = gameBoard(cells);
+    console.log(board);
   }
-
-  let board = gameBoard(cells);
-  console.log(board);
   gameStr += board;
 
-
-
   return gameStr;
+}
+
+function getRandomNumber(alreadyPicked) {
+  console.log('getRandomNumber');
+  console.log('alreadyPicked: ', alreadyPicked);
+  let randomNumber = Math.floor(Math.random() * 9);
+  if (alreadyPicked.includes(randomNumber)) {
+    return getRandomNumber(alreadyPicked);
+  }
+  alreadyPicked.push(randomNumber);
+  return randomNumber;
 }
 
 function gameBoard(cells) {

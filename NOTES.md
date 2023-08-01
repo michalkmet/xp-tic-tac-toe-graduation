@@ -27,10 +27,9 @@ Pomodoro 2:
 - ✅ New User stories
 User Story 3: randomly drawing on the board until game is finished
 - 🚧 UAT 3.1 When bots are playing I want to see that they change in their turns
-- ⚠ TODO UAT 3.2 When bots are playing I want to see that they randomly draw on the board
 
 Pomodoro 3:
 - ✅ Planning 
-- 🚧 UAT 3.1 When bots are playing I want to see that they change in their turns
+- ✅ UAT 3.1 When bots are playing I want to see that they change in their turns
 - ⚠ TODO UAT 3.2 When bots are playing I want to see that they randomly draw on the board
 - New User stories
