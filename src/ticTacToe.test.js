@@ -36,3 +36,11 @@ describe('User Story 3: randomly drawing on the board until game is finished', (
     expect(ticTacToe()).toContain('O');
   });
 });
+
+describe('User Story 4: Who wins the game?', () => {
+  it('UAT4.1 When Player 1 draw three X in the row Then I want to see PLAYER X WON! message', () => {
+    let cells = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '];
+    expect(gameBoard(cells)).toContain('\nX|X|X\n-+-+-\n | | \n-+-+-\n | | ');
+    expect(getWinnerMessage()).toContain('PLAYER X WON!');
+  });
+});

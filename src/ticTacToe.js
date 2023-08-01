@@ -2,6 +2,7 @@ function ticTacToe() {
   let gameStr = '';
   let cells = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
   let alreadyPicked = [];
+  let winner = [];
   gameStr += 'Game Board Creation...';
   gameStr += gameBoard(cells);
   gameStr += '\n\nBoard Created.';
@@ -15,6 +16,7 @@ function ticTacToe() {
     } else {
       cells[randomNumber] = 'O';
     }
+    winner = checkWhoWins(cells);
     console.log('cells: ', cells);
     board = gameBoard(cells);
     console.log(board);
@@ -25,8 +27,6 @@ function ticTacToe() {
 }
 
 function getRandomNumber(alreadyPicked) {
-  console.log('getRandomNumber');
-  console.log('alreadyPicked: ', alreadyPicked);
   let randomNumber = Math.floor(Math.random() * 9);
   if (alreadyPicked.includes(randomNumber)) {
     return getRandomNumber(alreadyPicked);
