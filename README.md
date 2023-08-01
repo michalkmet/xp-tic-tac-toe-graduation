@@ -40,4 +40,4 @@ As a User, I want to see who wins the game or if it's a tie
 
 User Story 5: Game timeouts
 As a User, I want to see game flowing smoothly
-- ⚠ TODO UAT5.1 When Player does the turn then it should wait 2 seconds for second player
+- ✅ DONE UAT5.1 When Player does the turn then it should wait 2 seconds for second player

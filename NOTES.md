@@ -56,4 +56,4 @@ Pomodoro 5:
 Pomodoro 6:
 - ✅ Planning
 - ✅ Refactor console logs for better game experience
-- 🚧 UAT5.1 When Player does the turn then it should wait 2 seconds for second player
+- ✅ UAT5.1 When Player does the turn then it should wait 2 seconds for second player

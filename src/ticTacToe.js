@@ -11,6 +11,7 @@ function ticTacToe() {
   let board = '';
   let endStr = '';
   for (let i = 0; i < 9; i++) {
+    sleep();
     let randomNumber = getRandomNumber(alreadyPicked);
     if (i % 2 === 0) {
       cells[randomNumber] = 'X';
@@ -86,6 +87,14 @@ function getWinnerMessage(winner) {
 
 function getTieMessage() {
   return 'GAME ENDS WITH A DRAW!';
+}
+
+function sleep() {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < 2000);
 }
 
 module.exports = { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins, getTieMessage };
