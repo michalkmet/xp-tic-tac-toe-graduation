@@ -1,7 +1,7 @@
 const ticTacToe = require('./ticTacToe');
 
-describe('hello', () => {
-  it('should return hello', () => {
-    expect(ticTacToe()).toBe('hello');
+describe('User Story 1', () => {
+  it('UAT1.1: When game started I want to see "Game Board Creation..." message', () => {
+    expect(ticTacToe()).toBe('Game Board Creation...');
   });
 });
