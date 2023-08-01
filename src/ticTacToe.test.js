@@ -17,6 +17,11 @@ describe('User Story 1: Initial messages and game board creation', () => {
 
 describe('User Story 2: Bots drawing X and O on the board', () => {
   it('UAT2.1 When board is created I want to see Player 1 to write X on the board', () => {
-    expect(gameBoard()).toContain('\nX| | \n-+-+-\n | | \n-+-+-\n | | ');
+    let cells = ['X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+    expect(gameBoard(cells)).toContain('\nX| | \n-+-+-\n | | \n-+-+-\n | | ');
+  });
+  it('UAT2.2 When first player is finished I want to see Player 2 to write O on the board', () => {
+    let cells = ['X', 'O', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+    expect(gameBoard(cells)).toContain('\nX|O| \n-+-+-\n | | \n-+-+-\n | | ');
   });
 });
