@@ -18,4 +18,4 @@ Pomodoro 1:
 - ✅ UAT1.1: When game started I want to see "Game Board Creation..." message
 - ✅ UAT1.2: When game started I want to see empty board: '\n | | \n-+-+-\n | | \n-+-+-\n | | '
 - ✅ UAT1.3: When board is created I want to see "\n\nBoard Created." message
-- ⚠ TODO UAT1.4: When board is created I want to see "The game will start with player X" message
+- ✅ UAT1.4: When board is created I want to see "\nThe game will start with player X" message

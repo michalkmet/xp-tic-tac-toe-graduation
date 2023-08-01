@@ -10,4 +10,7 @@ describe('User Story 1: Initial messages and game board creation', () => {
   it('UAT1.3: When board is created I want to see "\n\nBoard Created." message', () => {
     expect(ticTacToe()).toContain('\n\nBoard Created.');
   });
+  it('UAT1.4: When board is created I want to see "\nThe game will start with player X" message', () => {
+    expect(ticTacToe()).toContain('\nThe game will start with player X');
+  });
 });
