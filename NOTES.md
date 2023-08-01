@@ -12,5 +12,5 @@ The system should run in BOT mode (random BOT moves for player X & O) to print o
 
 Pomodoro 1:
 - ✅ Initial Project template
-- ⚠ TODO Initial Refactor
+- ✅ Initial Refactor
 - ⚠ TODO user stories
