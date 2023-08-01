@@ -1,4 +1,4 @@
-const { ticTacToe, gameBoard } = require('./ticTacToe');
+const { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins } = require('./ticTacToe');
 
 describe('User Story 1: Initial messages and game board creation', () => {
   it('UAT1.1: When game started I want to see "Game Board Creation..." message', () => {
@@ -41,6 +41,7 @@ describe('User Story 4: Who wins the game?', () => {
   it('UAT4.1 When Player 1 draw three X in the row Then I want to see PLAYER X WON! message', () => {
     let cells = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '];
     expect(gameBoard(cells)).toContain('\nX|X|X\n-+-+-\n | | \n-+-+-\n | | ');
+    expect(checkWhoWins(cells)).toStrictEqual(['X']);
     expect(getWinnerMessage()).toContain('PLAYER X WON!');
   });
 });

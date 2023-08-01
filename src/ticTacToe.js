@@ -20,10 +20,26 @@ function ticTacToe() {
     console.log('cells: ', cells);
     board = gameBoard(cells);
     console.log(board);
+    if (winner[0] === 'X' || winner === 'O') {
+      gameStr += getWinnerMessage(winner[0]);
+      break;
+    }
   }
   gameStr += board;
-
   return gameStr;
+}
+
+function checkWhoWins(cells) {
+  let winner = [];
+  ['X', 'O'].forEach((player) => {
+    if (cells[0] === player && cells[1] === player && cells[2] === player ||
+      cells[3] === player && cells[4] === player && cells[5] === player ||
+      cells[6] === player && cells[7] === player && cells[8] === player )
+    {
+      winner.push(player);
+    }
+  });
+  return winner;
 }
 
 function getRandomNumber(alreadyPicked) {
@@ -50,4 +66,8 @@ function gameBoard(cells) {
   return board;
 }
 
-module.exports = { ticTacToe, gameBoard };
+function getWinnerMessage() {
+  return 'PLAYER X WON!';
+}
+
+module.exports = { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins };
