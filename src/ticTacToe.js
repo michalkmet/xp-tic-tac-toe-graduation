@@ -1,6 +1,13 @@
 function ticTacToe() {
-  console.log('Game Board Creation...');
-  return 'Game Board Creation...';
+  let gameStr = '';
+  gameStr += 'Game Board Creation...';
+  gameStr += createBoard();
+  console.log(gameStr);
+  return gameStr;
+}
+
+function createBoard() {
+  return '\n | | \n-+-+-\n | | \n-+-+-\n | | ';
 }
 
 module.exports = ticTacToe;
