@@ -37,3 +37,7 @@ As a User, I want to see who wins the game or if it's a tie
 - ✅ DONE UAT4.2 When Player 2 draw three O in the row Then I want to see PLAYER O WON! message
 - ✅ DONE UAT4.3 When Player 1 draw three X diagonaly Then I want to see PLAYER X WON! message
 - ✅ DONE UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
+
+User Story 5: Game timeouts
+As a User, I want to see game flowing smoothly
+- ⚠ TODO UAT5.1 When Player does the turn then it should wait 2 seconds for second player

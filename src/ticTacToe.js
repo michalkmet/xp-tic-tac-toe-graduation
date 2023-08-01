@@ -17,15 +17,18 @@ function ticTacToe() {
       cells[randomNumber] = 'O';
     }
     winner = checkWhoWins(cells);
+    console.log('winner: ', winner);
     board = gameBoard(cells);
     console.log(board);
     if (winner[0] === 'X' || winner === 'O') {
-      gameStr += getWinnerMessage(winner[0]);
+      gameStr = board + '\n' + getWinnerMessage(winner[0]);
       break;
     }
   }
-  gameStr += board;
-  console.log(getTieMessage());
+  if (winner.length === 0) {
+    gameStr = board + '\n' + getTieMessage();
+  }
+  console.log(gameStr);
   return gameStr;
 }
 

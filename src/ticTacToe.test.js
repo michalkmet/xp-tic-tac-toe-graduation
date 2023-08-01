@@ -63,3 +63,9 @@ describe('User Story 4: Who wins the game?', () => {
     expect(getTieMessage()).toContain('GAME ENDS WITH A DRAW!');
   });
 });
+
+describe('User Story 5: Game timeouts', () => {
+  it.only('UAT5.1 When Player does the turn then it should wait 2 seconds for second player', () => {
+    expect(ticTacToe()).toContain('Game Board Creation...\n | | \n-+-+-\n | | \n-+-+-\n | | ');
+  });
+});

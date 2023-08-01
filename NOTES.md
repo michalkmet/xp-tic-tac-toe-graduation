@@ -51,4 +51,5 @@ Pomodoro 5:
 - ✅ refactor User stories according the requirement
 - ✅ UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
 - ✅ Add timeout story
-- ⚠ TODO When Player does the turn then it should wait 2 seconds for second player
+- 🚧 UAT5.1 When Player does the turn then it should wait 2 seconds for second player
+
