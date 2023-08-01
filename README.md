@@ -9,3 +9,11 @@ The system should run in BOT mode (random BOT moves for player X & O) to print o
 - ✅ DONE
 
 ## Backlog
+
+User Story 1:
+As a User, I want to see game started and empty board created messages
+
+- ⚠ TODO UAT1.1: When game started I want to see "Game Board Creation..." message
+- ⚠ TODO UAT1.2: When game started I want to see empty board: '\n | | \n-+-+-\n | | \n-+-+-\n | '
+- ⚠ TODO UAT1.3: When board is created I want to see "Board Created." message
+- ⚠ TODO UAT1.4: When board is created I want to see "The game will start with player X" message
