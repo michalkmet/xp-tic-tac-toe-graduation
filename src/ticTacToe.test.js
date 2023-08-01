@@ -50,4 +50,10 @@ describe('User Story 4: Who wins the game?', () => {
     expect(checkWhoWins(cells)).toStrictEqual(['O']);
     expect(getWinnerMessage('O')).toContain('PLAYER O WON!');
   });
+  it('UAT4.3 When Player 1 draw three X diagonaly Then I want to see PLAYER X WON! message', () => {
+    let cells = ['X', 'X', 'O', ' ', 'X', 'O', ' ', ' ', 'X'];
+    expect(gameBoard(cells)).toContain('\nX|X|O\n-+-+-\n |X|O\n-+-+-\n | |X');
+    expect(checkWhoWins(cells)).toStrictEqual(['X']);
+    expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
+  });
 });
