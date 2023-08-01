@@ -7,9 +7,18 @@ function ticTacToe() {
   gameStr += '\nThe game will start with player X';
   console.log(gameStr);
 
+  for (let i = 0; i < 9; i++){
+    if (i % 2 === 0){
+      cells[randomNumber] = 'X';
+    }
+  }
+
   let board = gameBoard(cells);
   console.log(board);
   gameStr += board;
+
+
+
   return gameStr;
 }
 

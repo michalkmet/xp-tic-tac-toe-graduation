@@ -25,3 +25,6 @@ Pomodoro 2:
 - ✅ UAT2.1 When board is created I want to see Player 1 to write X on the board
 - ✅ UAT2.2 When first player is finished I want to see Player 2 to write O on the board
 - ✅ New User stories
+User Story 3: randomly drawing on the board until game is finished
+- 🚧 UAT 3.1 When bots are playing I want to see that they change in their turns
+- ⚠ TODO UAT 3.2 When bots are playing I want to see that they randomly draw on the board

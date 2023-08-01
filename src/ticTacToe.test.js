@@ -25,3 +25,10 @@ describe('User Story 2: Bots drawing X and O on the board', () => {
     expect(gameBoard(cells)).toContain('\nX|O| \n-+-+-\n | | \n-+-+-\n | | ');
   });
 });
+
+describe('User Story 3: randomly drawing on the board until game is finished', () => {
+  it.only('UAT 3.1 When bots are playing I want to see that they change in their turns', () => {
+    expect(ticTacToe()).toContain('|X');
+    // expect(ticTacToe()).toContain('|O');
+  });
+});
