@@ -56,4 +56,10 @@ describe('User Story 4: Who wins the game?', () => {
     expect(checkWhoWins(cells)).toStrictEqual(['X']);
     expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
   });
+  it('UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message', () => {
+    let cells = ['X', 'X', 'O', ' ', 'X', 'O', ' ', ' ', 'X'];
+    expect(gameBoard(cells)).toContain('\nX|X|O\n-+-+-\n |X|O\n-+-+-\n | |X');
+    expect(checkWhoWins(cells)).toStrictEqual(['X']);
+    expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
+  });
 });
