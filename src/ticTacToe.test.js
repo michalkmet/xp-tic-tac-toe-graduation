@@ -42,6 +42,12 @@ describe('User Story 4: Who wins the game?', () => {
     let cells = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '];
     expect(gameBoard(cells)).toContain('\nX|X|X\n-+-+-\n | | \n-+-+-\n | | ');
     expect(checkWhoWins(cells)).toStrictEqual(['X']);
-    expect(getWinnerMessage()).toContain('PLAYER X WON!');
+    expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
+  });
+  it('UAT4.2 When Player 2 draw three O in the column Then I want to see PLAYER O WON! message', () => {
+    let cells = ['X', 'X', 'O', ' ', ' ', 'O', ' ', ' ', 'O'];
+    expect(gameBoard(cells)).toContain('\nX|X|O\n-+-+-\n | |O\n-+-+-\n | |O');
+    expect(checkWhoWins(cells)).toStrictEqual(['O']);
+    expect(getWinnerMessage('O')).toContain('PLAYER O WON!');
   });
 });

@@ -32,10 +32,16 @@ function ticTacToe() {
 function checkWhoWins(cells) {
   let winner = [];
   ['X', 'O'].forEach((player) => {
-    if (cells[0] === player && cells[1] === player && cells[2] === player ||
+    if (
+      (cells[0] === player && cells[1] === player && cells[2] === player ||
       cells[3] === player && cells[4] === player && cells[5] === player ||
-      cells[6] === player && cells[7] === player && cells[8] === player )
-    {
+      cells[6] === player && cells[7] === player && cells[8] === player 
+      ) || (
+      cells[0] === player && cells[3] === player && cells[6] === player ||
+      cells[1] === player && cells[4] === player && cells[7] === player ||
+      cells[2] === player && cells[5] === player && cells[8] === player 
+      )
+    ) {
       winner.push(player);
     }
   });
@@ -66,8 +72,8 @@ function gameBoard(cells) {
   return board;
 }
 
-function getWinnerMessage() {
-  return 'PLAYER X WON!';
+function getWinnerMessage(winner) {
+  return 'PLAYER ' + winner + ' WON!';
 }
 
 module.exports = { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins };
