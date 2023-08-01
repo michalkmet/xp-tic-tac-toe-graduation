@@ -9,6 +9,7 @@ function ticTacToe() {
   gameStr += '\nThe game will start with player X';
   console.log(gameStr);
   let board = '';
+  let endStr = '';
   for (let i = 0; i < 9; i++) {
     let randomNumber = getRandomNumber(alreadyPicked);
     if (i % 2 === 0) {
@@ -17,18 +18,19 @@ function ticTacToe() {
       cells[randomNumber] = 'O';
     }
     winner = checkWhoWins(cells);
-    console.log('winner: ', winner);
     board = gameBoard(cells);
     console.log(board);
-    if (winner[0] === 'X' || winner === 'O') {
-      gameStr = board + '\n' + getWinnerMessage(winner[0]);
+    
+    if (winner[0] === 'X' || winner[0] === 'O') {
+      endStr = board + '\n\n' + getWinnerMessage(winner[0]);
       break;
     }
   }
   if (winner.length === 0) {
-    gameStr = board + '\n' + getTieMessage();
+    endStr = board + '\n\n' + getTieMessage();
   }
-  console.log(gameStr);
+  console.log(endStr);
+  gameStr += board;
   return gameStr;
 }
 
