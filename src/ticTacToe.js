@@ -12,4 +12,8 @@ function createBoard() {
   return '\n | | \n-+-+-\n | | \n-+-+-\n | | ';
 }
 
-module.exports = ticTacToe;
+function gameBoard() {
+  return '\nX| | \n-+-+-\n | | \n-+-+-\n | | ';
+}
+
+module.exports = { ticTacToe, gameBoard };

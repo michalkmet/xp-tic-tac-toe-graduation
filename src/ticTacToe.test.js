@@ -1,4 +1,4 @@
-const ticTacToe = require('./ticTacToe');
+const { ticTacToe, gameBoard } = require('./ticTacToe');
 
 describe('User Story 1: Initial messages and game board creation', () => {
   it('UAT1.1: When game started I want to see "Game Board Creation..." message', () => {
@@ -12,5 +12,11 @@ describe('User Story 1: Initial messages and game board creation', () => {
   });
   it('UAT1.4: When board is created I want to see "\nThe game will start with player X" message', () => {
     expect(ticTacToe()).toContain('\nThe game will start with player X');
+  });
+});
+
+describe('User Story 2: Bots drawing X and O on the board', () => {
+  it('UAT2.1 When board is created I want to see Player 1 to write X on the board', () => {
+    expect(gameBoard()).toContain('\nX| | \n-+-+-\n | | \n-+-+-\n | | ');
   });
 });
