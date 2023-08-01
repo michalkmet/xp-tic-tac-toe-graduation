@@ -44,5 +44,10 @@ Pomodoro 4:
 - ✅ UAT4.2 When Player 2 draw three O in the column Then I want to see PLAYER O WON! message
 - added refactor item
 - ✅ UAT4.3 When Player 1 draw three X diagonaly Then I want to see PLAYER X WON! message
-- ⚠ TODO UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
+- 🚧 UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
+
+Pomodoro 5:
+- ✅ Planning
+- ⚠ TODO refactor User stories according the requirement
+- 🚧 UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
 - ⚠ TODO Add timeout story
