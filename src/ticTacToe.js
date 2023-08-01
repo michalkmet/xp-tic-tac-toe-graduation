@@ -17,7 +17,6 @@ function ticTacToe() {
       cells[randomNumber] = 'O';
     }
     winner = checkWhoWins(cells);
-    console.log('cells: ', cells);
     board = gameBoard(cells);
     console.log(board);
     if (winner[0] === 'X' || winner === 'O') {
@@ -26,6 +25,7 @@ function ticTacToe() {
     }
   }
   gameStr += board;
+  console.log(getTieMessage());
   return gameStr;
 }
 
@@ -79,4 +79,8 @@ function getWinnerMessage(winner) {
   return 'PLAYER ' + winner + ' WON!';
 }
 
-module.exports = { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins };
+function getTieMessage() {
+  return 'GAME ENDS WITH A DRAW!';
+}
+
+module.exports = { ticTacToe, gameBoard, getWinnerMessage, checkWhoWins, getTieMessage };

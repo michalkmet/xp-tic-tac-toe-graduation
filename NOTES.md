@@ -49,5 +49,5 @@ Pomodoro 4:
 Pomodoro 5:
 - ✅ Planning
 - ✅ refactor User stories according the requirement
-- 🚧 UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
+- ✅ UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message
 - ⚠ TODO Add timeout story
