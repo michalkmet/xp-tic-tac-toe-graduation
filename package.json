@@ -1,0 +1,31 @@
+{
+  "name": "tic-tac-toe-graduation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michalkmet/xp-tic-tac-toe-graduation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michalkmet/xp-tic-tac-toe-graduation/issues"
+  },
+  "homepage": "https://github.com/michalkmet/xp-tic-tac-toe-graduation#readme",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.2",
+    "jshint": "^2.13.6",
+    "prettier": "^3.0.0"
+  }
+}
