@@ -38,15 +38,15 @@ describe('User Story 3: randomly drawing on the board until game is finished', (
 });
 
 describe('User Story 4: Who wins the game?', () => {
-  it('UAT4.1 When Player 1 draw three X in the row Then I want to see PLAYER X WON! message', () => {
-    let cells = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '];
-    expect(gameBoard(cells)).toContain('\nX|X|X\n-+-+-\n | | \n-+-+-\n | | ');
+  it('UAT4.1 When Player 1 draw three X in the column Then I want to see PLAYER X WON! message', () => {
+    let cells = ['X', ' ', ' ', 'X', 'O', ' ', 'X', 'O', ' '];
+    expect(gameBoard(cells)).toContain('\nX| | \n-+-+-\nX|O| \n-+-+-\nX|O| ');
     expect(checkWhoWins(cells)).toStrictEqual(['X']);
     expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
   });
-  it('UAT4.2 When Player 2 draw three O in the column Then I want to see PLAYER O WON! message', () => {
-    let cells = ['X', 'X', 'O', ' ', ' ', 'O', ' ', ' ', 'O'];
-    expect(gameBoard(cells)).toContain('\nX|X|O\n-+-+-\n | |O\n-+-+-\n | |O');
+  it('UAT4.2 When Player 2 draw three O in the row Then I want to see PLAYER O WON! message', () => {
+    let cells = ['X', ' ', 'X', 'O', 'O', 'O', 'X', ' ', ' '];
+    expect(gameBoard(cells)).toContain('\nX| |X\n-+-+-\nO|O|O\n-+-+-\nX| | ');
     expect(checkWhoWins(cells)).toStrictEqual(['O']);
     expect(getWinnerMessage('O')).toContain('PLAYER O WON!');
   });
@@ -57,7 +57,7 @@ describe('User Story 4: Who wins the game?', () => {
     expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
   });
   it('UAT4.4 When There is no winner after 9 rounds Then I want to see GAME ENDS WITH A DRAW! message', () => {
-    let cells = ['X', 'X', 'O', ' ', 'X', 'O', ' ', ' ', 'X'];
+    let cells = ['X', ' ', ' ', 'O', 'X', ' ', 'O', ' ', 'X'];
     expect(gameBoard(cells)).toContain('\nX|X|O\n-+-+-\n |X|O\n-+-+-\n | |X');
     expect(checkWhoWins(cells)).toStrictEqual(['X']);
     expect(getWinnerMessage('X')).toContain('PLAYER X WON!');
