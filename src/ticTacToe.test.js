@@ -28,6 +28,10 @@ describe('User Story 2: Bots drawing X and O on the board', () => {
 
 describe('User Story 3: randomly drawing on the board until game is finished', () => {
   it('UAT 3.1 When bots are playing I want to see that they change in their turns', () => {
+    expect(ticTacToe()).not.toContain('The game will start with player X\n | | ');
+  });
+  it('UAT 3.2 When bots are playing I want to see that they randomly draw on the board', () => {
+    expect(ticTacToe()).not.toContain('The game will start with player X\n | | ');
     expect(ticTacToe()).toContain('X');
     expect(ticTacToe()).toContain('O');
   });
