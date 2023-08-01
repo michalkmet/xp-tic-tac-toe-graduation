@@ -21,5 +21,12 @@ As a User, I want to see game started and empty board created messages
 User Story 2: Bots drawing X and O on the board
 As a User, I want to see two bot players drawing X and O on the board
 
-- ⚠ TODO UAT2.1 When board is created I want to see Player 1 to write X on the board
-- ⚠ TODO UAT2.2 When first player is finished I want to see Player 2 to write O on the board
+- ✅ DONE UAT2.1 When board is created I want to see Player 1 to write X on the board
+- ✅ DONE UAT2.2 When first player is finished I want to see Player 2 to write O on the board
+
+
+User Story 3: randomly drawing on the board until game is finished
+As a User, I want to see two bot players randomly drawing X and O on the board until game is finished
+
+- ⚠ TODO UAT 3.1 When bots are playing I want to see that they change in their turns
+- ⚠ TODO UAT 3.2 When bots are playing I want to see that they randomly draw on the board
